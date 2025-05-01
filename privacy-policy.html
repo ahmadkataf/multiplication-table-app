@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية - جداول الضرب للأطفال</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+        
+        :root {
+            --primary: #4E54FF;
+            --secondary: #FF5E7D;
+            --success: #2BD9AF;
+            --warning: #FFB830;
+            --info: #5B93FF;
+            --light: #F8F9FA;
+            --dark: #212529;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        
+        header.scrolled {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo i {
+            margin-left: 10px;
+            font-size: 28px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #3a41e0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 84, 255, 0.4);
+        }
+        
+        .privacy-content {
+            padding: 120px 0 60px;
+        }
+        
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .privacy-header .last-update {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .privacy-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .privacy-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(78, 84, 255, 0.1);
+        }
+        
+        .privacy-section h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            color: var(--secondary);
+        }
+        
+        .privacy-section p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        .privacy-section ul {
+            margin: 15px 0;
+            padding-right: 20px;
+        }
+        
+        .privacy-section li {
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            background: rgba(78, 84, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        
+        .bold-text {
+            font-weight: 700;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            color: white;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+            bottom: -10px;
+            right: 0;
+        }
+        
+        .footer-column p {
+            line-height: 1.6;
+            color: #aaa;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .privacy-section {
+                padding: 25px;
+            }
+            
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-calculator"></i>
+                    <span>جداول الضرب للأطفال</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html#features">الميزات</a>
+                    <a href="index.html#games">الألعاب</a>
+                    <a href="index.html#download">التحميل</a>
+                    <a href="privacy-policy.html">سياسة الخصوصية</a>
+                </div>
+                <a href="index.html#download" class="cta-button">تحميل التطبيق</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="privacy-content">
+        <div class="container">
+            <div class="privacy-header">
+                <h1>سياسة الخصوصية لتطبيق جداول الضرب للأطفال</h1>
+                <p class="last-update">تاريخ آخر تحديث: <span id="current-date">2023/05/01</span></p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>مقدمة</h2>
+                <p>نحن نقدر خصوصيتك ونلتزم بحماية بيانات المستخدمين. هذه السياسة توضح كيفية جمع المعلومات واستخدامها وحمايتها في تطبيق "جداول الضرب للأطفال".</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>المعلومات التي نجمعها</h2>
+                <p>تطبيقنا مصمم خصيصًا للأطفال، ونحن نلتزم بمعايير خصوصية عالية. نحن:</p>
+                <ul>
+                    <li><span class="bold-text">لا نجمع</span> أي معلومات شخصية (مثل الاسم، العمر، العنوان، البريد الإلكتروني، رقم الهاتف، إلخ).</li>
+                    <li><span class="bold-text">لا نطلب</span> إنشاء حسابات أو تسجيل دخول.</li>
+                    <li><span class="bold-text">لا نتتبع</span> موقع المستخدم.</li>
+                    <li><span class="bold-text">لا نشارك</span> أي بيانات مع أطراف ثالثة لأغراض تسويقية.</li>
+                </ul>
+                
+                <h3>معلومات التقدم في اللعبة</h3>
+                <p>نقوم بتخزين معلومات غير شخصية مثل:</p>
+                <ul>
+                    <li>إحصائيات أداء اللاعب (النقاط، المستويات المكتملة، إلخ)</li>
+                    <li>إعدادات التطبيق والتفضيلات</li>
+                </ul>
+                <p><span class="bold-text">كل هذه المعلومات تُخزن محليًا على جهازك فقط</span> ولا تُرسل إلى خوادمنا أو أي طرف ثالث.</p>
+                
+                <h3>معلومات تحليلية مجهولة المصدر</h3>
+                <p>قد نستخدم أدوات تحليلية لجمع معلومات مجهولة المصدر لتحسين التطبيق، مثل:</p>
+                <ul>
+                    <li>أداء التطبيق</li>
+                    <li>معدل استخدام الميزات</li>
+                    <li>تقارير الأخطاء</li>
+                </ul>
+                <p>هذه المعلومات لا تحدد هوية المستخدم وتُستخدم فقط لتحسين تجربة المستخدم.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>الإعلانات</h2>
+                <p>إذا كان تطبيقنا يحتوي على إعلانات، فإننا نستخدم شبكات إعلانية متوافقة مع قوانين حماية خصوصية الأطفال، ونختار إعلانات مناسبة للأطفال. الإعلانات قد تستخدم معرفات الجهاز غير الشخصية لعرض إعلانات ذات صلة، ولكنها لا تستخدم لتتبع المستخدمين عبر التطبيقات الأخرى أو المواقع الإلكترونية.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>المشتريات داخل التطبيق</h2>
+                <p>قد يقدم التطبيق مشتريات داخل التطبيق للوصول إلى ميزات إضافية. عمليات الشراء تتم من خلال متجر التطبيقات (Google Play) وتخضع لسياسات الخصوصية الخاصة بهم. نحن لا نخزن معلومات الدفع الخاصة بك.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>الوصول إلى البيانات وحذفها</h2>
+                <p>جميع بيانات المستخدم مخزنة محليًا على الجهاز فقط. يمكن للمستخدمين حذف جميع البيانات المخزنة عن طريق:</p>
+                <ul>
+                    <li>استخدام وظيفة "إعادة ضبط التقدم" داخل التطبيق</li>
+                    <li>إلغاء تثبيت التطبيق</li>
+                </ul>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>الأمان</h2>
+                <p>نحن نلتزم بحماية بيانات المستخدمين من خلال استخدام الممارسات الأمنية المناسبة واتباع أفضل الممارسات في تطوير التطبيقات.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>التغييرات على سياسة الخصوصية</h2>
+                <p>قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سيتم نشر أي تغييرات على سياسة الخصوصية على هذه الصفحة وداخل التطبيق عند الإمكان.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>اتصل بنا</h2>
+                <p>إذا كان لديك أي أسئلة أو استفسارات حول سياسة الخصوصية الخاصة بنا، يرجى الاتصال بنا على:</p>
+                <div class="contact-info">
+                    <p>البريد الإلكتروني: <a href="mailto:info@example.com">info@example.com</a></p>
+                    <p>الموقع الإلكتروني: <a href="https://www.example.com">www.example.com</a></p>
+                </div>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>التوافق مع القوانين</h2>
+                <p>يتوافق تطبيقنا مع:</p>
+                <ul>
+                    <li>قانون حماية خصوصية الأطفال عبر الإنترنت (COPPA)</li>
+                    <li>اللائحة العامة لحماية البيانات (GDPR)</li>
+                    <li>قوانين وأنظمة متجر Google Play</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>عن التطبيق</h3>
+                    <p>تطبيق تعليمي تفاعلي يساعد الأطفال على تعلم جداول الضرب بطريقة ممتعة وشيقة من خلال الألعاب والتحديات المتنوعة.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">الميزات</a></li>
+                        <li><a href="index.html#games">الألعاب</a></li>
+                        <li><a href="index.html#download">التحميل</a></li>
+                        <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>تواصل معنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@example.com">البريد الإلكتروني</a></li>
+                        <li><a href="#">موقعنا الإلكتروني</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 جميع الحقوق محفوظة لتطبيق جداول الضرب للأطفال
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Set current date
+        const today = new Date();
+        const formattedDate = `${today.getFullYear()}/${(today.getMonth()+1).toString().padStart(2, '0')}/${today.getDate().toString().padStart(2, '0')}`;
+        document.getElementById('current-date').textContent = formattedDate;
+    </script>
+</body>
+</html> 
